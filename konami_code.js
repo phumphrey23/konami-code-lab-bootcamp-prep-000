@@ -6,13 +6,12 @@ function init() {
     const key = parseInt(e.detail || e.which);
     if(key === code[index]){
     index++
-     if(index === code.length-1){
+     if(index === code.length){
        alert("Hurray!")
        index = 0;
      }
   } else{
     index = 0;
   }
-  }, false)
-}
-init();
+});
+init()

@@ -5,13 +5,13 @@ function init() {
     var index = 0;
     const key = parseInt(e.detail || e.which);
     if(key === code[index]){
-    index++
-     if(index === code.length){
-       alert("Hurray!")
+    index++;
+     if(index === code.length-1){
        index = 0;
+       alert("Konami!");
      }
-  } else{
+  } else {
     index = 0;
   }
-}, false);
+});
 }

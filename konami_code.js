@@ -2,17 +2,18 @@ const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 
 function init() {
   document.body.addEventListener('keydown', function(e) {
-    var index = 0;
-    const key = parseInt(e.detail || e.which);
-    for (var i = 0; i < code.length; i++){
-    if(key === code[i]){
-    index++;
-     if(index === code.length-1){
-       index = 0;
-       alert("Konami!");
-     }
-  } else {
-    index = 0;
-  }}
-});
-}
+    const key = parseInt(e.which || e.detail)
+
+    if (code[index] === key) {
+      index++
+
+      if (index === code.length - 1) {
+        alert('hurray!')
+
+        index = 0
+      }
+    } else {
+          index = 0
+    }
+  })
+ }		  }
